@@ -214,8 +214,8 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
         } else {
             format = NSLocalizedStringFromTableInBundle(@"assets.toolbar.item-selected", @"QBImagePicker", bundle, nil);
         }
-        
-        NSString *title = [NSString stringWithFormat:format, selectedAssets.count];
+
+        NSString *title = [NSString stringWithFormat:format, selectedAssets.count, self.imagePickerController.maximumNumberOfSelection];
         [(UIBarButtonItem *)self.toolbarItems[1] setTitle:title];
     } else {
         [(UIBarButtonItem *)self.toolbarItems[1] setTitle:@""];
